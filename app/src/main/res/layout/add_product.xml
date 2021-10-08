@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/primaryColor"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/backBTN"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="7dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Add New Product"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/logoutBTN"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="7dp"
+            android:src="@drawable/ic_logout_24"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:spinnerMode="dropdown"
+                android:contextClickable="true"
+                android:popupBackground="@color/greyDark"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"/>
+
+            />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:theme="@style/TextInputCatalogue"
+                app:hintTextAppearance="@style/TextLabelCatalogue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/productNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primaryColor"
+                    android:hint="Product Name"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/variantHeadingRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/customerDetailsRow"
+                android:layout_margin="20dp"
+                android:gravity="center"
+
+                android:padding="5dp"
+                android:background="@color/primaryLightColor"
+                >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variantText"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.35"
+                    android:layout_marginLeft="5dp"
+                    android:text="Variant"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/priceTV"
+                    android:layout_weight="0.25"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Price"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/discountAmountTV"
+                    android:layout_weight="0.20"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Discount Amount"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variantActive"
+                    android:gravity="center"
+
+                    android:layout_weight="0.20"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:text="Active"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/variant30gmRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variantHeadingRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant30gmTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.20"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="30 gms"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="5dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:id="@+id/price30gm"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+
+                    android:id="@+id/discount30gm"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active30gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+ />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/variant60gmRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant30gmRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant60gmTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.20"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="60 gms"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:id="@+id/price60gm"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:id="@+id/discount60gm"
+                    android:textColor="@color/black"
+                    android:hint="discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active60gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/variant100gmRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant60gmRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant100gmTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.20"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="100 gms"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:id="@+id/price100gm"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:id="@+id/discount100gm"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active100gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/variant250gmRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant100gmRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant250gmTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.20"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="250 gms"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/price250gm"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/discount250gm"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active250gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/variant500gmRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant250gmRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant500gmTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.20"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="500 gms"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/price500gm"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:id="@+id/discount500gm"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active500gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/variant1kgRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant500gmRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant1kgTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.30"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="1 KG"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:gravity="center"
+                    android:id="@+id/price1kg"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/discount1kg"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active1kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/variant2kgRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant1kgRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+               >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant2kgTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.30"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="2 KG"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/price2kg"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/discount2kg"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active2kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/variant3kgRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant2kgRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant3kgTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.30"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="3 KG"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/price3kg"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/blue_outline"
+                    android:gravity="center"
+                    android:layout_weight="0.35"
+                    android:id="@+id/discount3kg"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active3kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/variant5kgRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@id/variant3kgRow"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/variant5kgTitle"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.30"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="5 KG"/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:id="@+id/price5kg"
+                    android:textColor="@color/black"
+                    android:hint="Price"
+                    android:textSize="12dp"
+                    android:text=""/>
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_width="15dp"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:background="@drawable/blue_outline"
+                    android:layout_weight="0.35"
+                    android:id="@+id/discount5kg"
+                    android:textColor="@color/black"
+                    android:hint="Discount"
+                    android:textSize="12dp"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/active5kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    app:trackTint="@color/grey"
+                    />
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:theme="@style/TextInputCatalogue"
+                app:hintTextAppearance="@style/TextLabelCatalogue"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/variant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primaryColor"
+                    android:hint="SelectVariant"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="14dp"
+                    android:visibility="gone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:theme="@style/TextInputCatalogue"
+                app:hintTextAppearance="@style/TextLabelCatalogue"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/priceET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green3"
+                    android:hint="price"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/green3"
+                    android:textColorHint="@color/green3"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/displayswitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:checked="true"
+                app:trackTint="@color/grey"
+                android:text="Display To User"
+                android:textColor="@color/primaryColor"
+                android:textSize="14dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <!--    <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Discount"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="14dp" />
+
+                <CheckBox
+                    android:id="@+id/recommendedCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/primaryColor" />-->
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/aboutProductText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:theme="@style/TextInputCatalogue"
+                app:hintTextAppearance="@style/TextLabelCatalogue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aboutProductET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primaryColor"
+                    android:hint="About Product"
+                    android:inputType="text"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productStorageUsesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:theme="@style/TextInputCatalogue"
+                app:hintTextAppearance="@style/TextLabelCatalogue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/storageUsesET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primaryColor"
+                    android:hint="Product Storage Uses"
+                    android:inputType="text"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/productOtherInfoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:theme="@style/TextInputCatalogue"
+                app:hintTextAppearance="@style/TextLabelCatalogue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otherInfoET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primaryColor"
+                    android:hint="Other Info"
+                    android:inputType="text"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/uploadImgBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/primaryColor"
+                android:padding="10dp"
+                android:text="Upload Images"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+            <TextView
+                android:id="@+id/uploadSizeText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:text="Upload image of width-260dp and height-180dp"
+                android:textColor="@color/primaryColor"
+                android:textSize="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imgRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/nextBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_bg"
+                    android:backgroundTint="@color/primaryDarkColor"
+                    android:padding="10dp"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/submitBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_bg"
+                    android:backgroundTint="@color/primaryDarkColor"
+                    android:padding="10dp"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/cancelBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="Cancel"
+                    android:textColor="@color/green3"
+                    android:textSize="14dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

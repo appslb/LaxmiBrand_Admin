@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_margin="5dp"
+        app:cardElevation="2dp"
+        android:id="@+id/orderCard">
+        <RelativeLayout
+            android:id="@+id/OrderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/orderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Id:1234"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="@color/black"
+                android:layout_below="@id/orderdate"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:id="@+id/orderstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Id"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="@color/green"
+                android:layout_below="@id/orderid"
+                android:layout_marginLeft="10dp"
+                />
+
+
+            <TextView
+                android:id="@+id/orderdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15/7/21"
+                android:textSize="16sp"
+                android:typeface="serif"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/orderstatus"
+                android:background="@drawable/button_bg"
+                android:text="Total Amount - Rs.1200"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

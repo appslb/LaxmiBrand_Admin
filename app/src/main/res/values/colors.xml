@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--?xml version="1.0" encoding="UTF-8"?-->
+<!--
+        <color name="primaryColor">#ff3d00</color>
+-->
+    <color name="primaryColor">#cb202d</color>
+
+    <color name="primaryLightColor">#ff7539</color>
+        <color name="primaryDarkColor">#c30000</color>
+        <color name="primaryTextColor">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="titlebar_green">#E635A49D</color>
+    <color name="titlebar_blue">#E6156184</color>
+    <color name="green3">#248291</color>
+    <color name="green3_light">#40248291</color>
+
+    <color name="grey">#BFB8B8B8</color>
+    <color name="greyLight">#BFDAD0D0</color>
+
+    <color name="greyDark">#BF716868</color>
+    <color name="green">#4CAF50</color>
+    <color name="light_red">#EA6459</color>
+    <color name="red">#FF1400</color>
+
+
+<!--
+
+
+    <color name="colorPrimary">#1a6097</color>
+    <color name="colorPrimaryDark">#1a6097</color>
+    <color name="colorPrimary">#302f2c</color>
+    <color name="colorPrimaryDark">#1A1915</color>
+    <color name="colorOldPrimary">#302f2c</color>
+    <color name="colorOldPrimaryDark">#1A1915</color>
+    <color name="colorAccent">#DD8039</color>
+    <color name="colorAccent2">#168780</color>
+    <color name="colorAccent3">#178680</color>
+
+    <color name="lightgreen">#868017</color>
+    <color name="background">#E0E0E0</color>
+    <color name="tablehead">#5DADE2</color>
+    <color name="tableinside">#EBEDEF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colortext">#100b20</color>
+    <color name="colorhint">#a9aaac</color>
+    <color name="cyan">#84FFFF</color>
+    <color name="lightred">#FFEBEE</color>
+    <color name="colorlatest">#8D6E63</color>
+    <color name="graydark">#696969</color>
+    <color name="graydark2">#808080</color>
+
+
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+
+    <color name="red_300">#E57373</color>
+    <color name="red_400">#EF5350</color>
+
+
+    <color name="gray_background">#D5D5D5</color>
+    <color name="gray_text">#7F7F7F</color>
+    <color name="gray_text_light">#A5A5A5</color>
+    <color name="gray">#EEEEEE</color>
+
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#800080</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+    <color name="bgpink">#FF4081</color>
+    <color name="red">#F44336</color>
+    <color name="blue">#2278d4</color>
+
+    <color name="primarydark">#800000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color_grey">#336699</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="primary">#A52A2A</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="backgroundhome">#EF9A9A</color>
+    <color name="backgroundhome1">#E57373</color>
+    <color name="maroon">#800000</color>
+    <color name="darkred">#8B0000</color>
+    <color name="brown">#A52A2A</color>
+    <color name="browncercle">#86171e</color>
+    <color name="firebrick">#B22222	</color>
+    <color name="lightbackground">#bdbdbd	</color>
+    <color name="greycercle">#0c2c45</color>
+
+    <color name="myTextPrimaryColor">#212121</color>
+    <color name="myTextSecondaryColor">#727272</color>
+
+
+    <color name="duskYellow">#ECB028</color>
+    <color name="lightGrey">#d3d3d3</color>
+
+    <color name="greenlatest">#7ac92e</color>
+    <color name="redlatest">#f00808</color>
+    <color name="grey">#eaeaea</color>
+    <color name="greenoriginal">#00ff00</color>
+
+    <color name="sbglogoorange">#E97C30</color>
+-->
+
+
+</resources>

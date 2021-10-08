@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:padding="5dp"
+        android:id="@+id/itemsRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+         android:background="@color/white"
+        >
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/ItemWeight"
+        android:layout_weight="0.35"
+
+        android:text="5kg"
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/ItemRate"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.15"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="100.00"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/ItemQty"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.15"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="5"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/ItemAmount"
+            android:layout_gravity="center_vertical"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_weight="0.15"
+            android:text="500.00"/>
+
+    </LinearLayout>
+
+

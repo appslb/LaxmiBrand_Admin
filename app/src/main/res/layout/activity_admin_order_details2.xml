@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/dateRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/primaryColor"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/dateTV"
+            android:textColor="@color/white"
+            android:text="Date : "/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/dateValue"
+            android:textColor="@color/white"
+
+            android:text="06-06-21"/>
+
+       </LinearLayout>
+    <LinearLayout
+        android:id="@+id/customerDetailsRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/dateRow"
+        android:layout_marginTop="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/customerNameRow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/customerNameTV1"
+                android:textColor="@color/black"
+                android:text="Order NO:"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/customerNameTV2"
+                android:textColor="@color/black"
+                android:text=""/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/customerAddressRow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/customerAddressTV"
+                android:textColor="@color/black"
+                android:text="Address: "/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/customerAddress"
+                android:lines="5"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/customerMobileRow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/customerMobileTV"
+                android:textColor="@color/black"
+                android:text="Mobile: "/>
+
+            <TextView
+                android:id="@+id/customerMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/OrderStatusRow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/orderStatusTV"
+                android:textColor="@color/black"
+                android:text="Order Status: "/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/orderStatusValue"
+                android:textColor="@color/black"
+                android:text=""/>
+
+        </LinearLayout>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/pdfBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/primaryColor"
+            android:padding="10dp"
+            android:text="Make PDF"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/columnHeadingRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/customerDetailsRow"
+        android:layout_marginTop="10dp"
+        android:background="@color/primaryColor"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/ItemsTV"
+            android:textColor="@color/white"
+            android:layout_weight="1.0"
+            android:text="Items"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/RateTV"
+            android:layout_weight="0.25"
+            android:textColor="@color/white"
+            android:text="Rate"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:id="@+id/QtyTV"
+            android:layout_weight="0.25"
+            android:text="Qty"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/AmountTV"
+            android:layout_weight="0.05"
+            android:textColor="@color/white"
+
+            android:text="Amount"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderItemsList"
+        android:layout_below="@id/columnHeadingRow"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/not_available"
+        android:layout_below="@id/columnHeadingRow"
+
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:typeface="serif"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:text="No Order Details Found!"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:typeface="serif"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:text="Details not availablefor this Item." />
+
+
+    </LinearLayout>
+
+   <!-- <LinearLayout
+        android:id="@+id/grandTotalRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:background="@color/green3_light"
+        >
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/grandTotalTV"
+        android:text="Grand Total : "
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/grandTotalValue"
+        android:textColor="@color/black"
+
+        android:textStyle="bold"
+        android:text="4000"/>
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/grandTotalRow"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:gravity="right"
+        android:background="@color/primaryColor"
+        >
+
+        <LinearLayout
+            android:id="@+id/grandTotalRowI"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:background="@color/primaryColor"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/grandTotalTV2"
+                android:text="Total : "
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/grandTotalValue2"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text=""/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/discountRow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/primaryColor"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/offerAvailText"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Special discount applied."
+                android:visibility="visible"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/discountAmount"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text=""
+                android:visibility="visible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/deliveryChargesRow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/primaryColor"
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/deliveryChargesText"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Delivery Charge"
+                android:visibility="visible"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/deliveryChargeAmt"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="0.0"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/grandTotalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grand Total : "
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
